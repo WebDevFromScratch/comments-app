@@ -5,7 +5,7 @@ import Location   from 'react-router/lib/Location';
 import serialize  from 'serialize-javascript';
 import jade       from 'jade';
 
-export deafult (req, res, next, params) => {
+export default (req, res, next, params) => {
   // Storing params in variables
   const { routes, bundle, locals, Head } = params;
 
@@ -38,6 +38,7 @@ export deafult (req, res, next, params) => {
       locals.chunks = serialize(chunks);
 
       // Defining path to jade layout
+      // TODO: check this piece
       const layout = `${process.cwd()}/app/bundles/${bundle}/layouts/Layout.jade`;
 
       // Compiling initial html
