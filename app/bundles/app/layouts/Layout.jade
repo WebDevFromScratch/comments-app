@@ -1,0 +1,16 @@
+doctype html
+html
+  // Injecting 'locals.head'
+  != head
+  
+  body
+    // Injecting 'locals.body'
+    #app!= body
+    
+    // Injecting 'locals.chunks' global for webpack
+    script.
+      window.__CHUNKS__ = !{chunks};
+      
+      // Injecting js assets
+      script(src="#{vendorAsset}")
+      script(src="#{jsAsset}")
