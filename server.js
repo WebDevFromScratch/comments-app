@@ -32,6 +32,6 @@ export default (initter, config) => {
 
   // And listening it
   app.listen(app.get('port'), function() {
-    console.log('=> 🚀  Express ${config.bundle} ${config.env} server is running on port ${this.address().port}');
+    console.log(`=> 🚀  Express ${config.bundle} ${config.env} server is running on port ${this.address().port}`);
   });
 }
