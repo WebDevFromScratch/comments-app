@@ -17,6 +17,9 @@ const startDevTask = 'start:dev';
 // Task name to start local server with production assets
 const startProdTask = 'start:prod';
 
+// Defining environment
+const isDevBuild = process.argv.indexOf(startDevTask) !== -1;
+
 // Defining default task
 const startTask = isDevBuild ? startDevTask : prodBuildTask;
 
@@ -40,7 +43,7 @@ gulp.task(startDevTask, done => {
   run(['clean', 'lint'], ['bundle', 'copy'], ['server'], done);
 });
 
-gult.task(startProdTask, done => {
+gulp.task(startProdTask, done => {
   run(['clean', 'lint'], ['bundle', 'copy'], ['server'], done);
 });
 
