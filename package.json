@@ -1,5 +1,5 @@
 {
-  "name": "my-comments-2",
+  "name": "comments-app",
   "version": "1.0.0",
   "description": "Comments app - react + redux + express tutorial",
   "main": "server.app.js",
